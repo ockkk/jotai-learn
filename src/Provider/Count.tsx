@@ -1,7 +1,7 @@
 import { useAtom } from "jotai";
 import { countAtom, countSymbol } from "./countAtom";
 
-export function ProviderCount() {
+export function Count() {
   const [count, setCount] = useAtom(countAtom);
 
   const onPlusCount = () => {

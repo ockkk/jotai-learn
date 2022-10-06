@@ -1,5 +1,6 @@
 import { useAtom } from "jotai";
 import { countAtom, countSymbol } from "./countAtom";
+import { JotaiProviderHOC } from "./JotaiProviderHOC";
 
 export function Count() {
   const [count, setCount] = useAtom(countAtom);
@@ -20,3 +21,5 @@ export function Count() {
     </div>
   );
 }
+
+export const ProviderCount = JotaiProviderHOC(Count, countSymbol);

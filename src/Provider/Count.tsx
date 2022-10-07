@@ -1,9 +1,13 @@
 import { useAtom } from "jotai";
-import { countAtom, countSymbol } from "./countAtom";
+import { countAtom, countSymbol_1 } from "./countAtom";
 import { JotaiProviderHOC } from "./JotaiProviderHOC";
 
-export function Count() {
-  const [count, setCount] = useAtom(countAtom);
+interface CountProps {
+  symbol?: symbol;
+}
+
+export function Count({ symbol }: CountProps) {
+  const [count, setCount] = useAtom(countAtom, symbol);
 
   const onPlusCount = () => {
     setCount(count + 1);
@@ -22,4 +26,4 @@ export function Count() {
   );
 }
 
-export const ProviderCount = JotaiProviderHOC(Count, countSymbol);
+export const ProviderCountSymbol1 = JotaiProviderHOC(Count, countSymbol_1);

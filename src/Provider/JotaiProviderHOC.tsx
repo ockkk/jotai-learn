@@ -13,7 +13,7 @@ export function JotaiProviderHOC<P>(
   return (props: P & JSX.IntrinsicAttributes) => {
     return (
       <Provider scope={symbol}>
-        <WrappedComponent {...props} />;
+        <WrappedComponent symbol={symbol} {...props} />
       </Provider>
     );
   };

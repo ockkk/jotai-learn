@@ -3,6 +3,8 @@
 1. provider 에 대해서
    [provider 그림 설명](https://excalidraw.com)
 
+   - jotai는 기본적으로 Provider-less모드를 제공한다.
+
    - scope를 설정해주지 않으면 Provider 내부의 컴포넌트는 완전 독립된 상태가 된다.
      Provider 외부의 상태값과 분리가 되는 것이다.
      상위 컴포넌트의 atom값도 받아올 수 없다.

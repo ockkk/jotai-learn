@@ -48,6 +48,7 @@ export function Test() {
 }
 
 export function Test2() {
+  // provider에 scope 설정이 되어있고 atom에 scope 설정을 해주지 않으면 전역을 바라본다.
   const [test1, setTest1] = useAtom(test1Atom);
 
   const onChange = () => {

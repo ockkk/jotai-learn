@@ -4,6 +4,7 @@ import { Layout } from "./layout/Layout";
 import { ProviderLeaning } from "./provider/ProviderLearning";
 
 function App() {
+  console.log("123123123");
   return (
     <Layout>
       <Header />
